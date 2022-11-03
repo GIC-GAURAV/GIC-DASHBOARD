@@ -7,18 +7,22 @@ import { DrawerItem, DrawerSelectEvent } from '@progress/kendo-angular-layout';
   templateUrl: './full-layout.component.html',
   styleUrls: ['./full-layout.component.css']
 })
+
+
 export class FullLayoutComponent implements OnInit {
   @ViewChild('drawer') drawer!: ElementRef ;
 
-  constructor( private router:Router) { }
+
+  constructor( private router:Router) {
+    
+  }
 
   ngOnInit(): void {
   }
-  public items: Array<DrawerItem> = [
+  public items: Array<customDrawerItem> = [
     { text: "To-Do-List", icon: "k-i-inbox",path:"application/to-do-list" },
-    { separator: true },
+  
     { text: "Survey", icon: "k-i-bell" ,path:"application/survey"},
-    { separator: true },
     { text: "Chats", icon: "k-i-calendar",path:"application/chats" },
     // { separator: true },
     // { text: "Attachments", icon: "k-i-envelop-link" },
@@ -30,3 +34,8 @@ export class FullLayoutComponent implements OnInit {
     this.router.navigate([ev.item.path])
   }
 }
+
+interface customDrawerItem extends DrawerItem {
+  path:string
+}
+

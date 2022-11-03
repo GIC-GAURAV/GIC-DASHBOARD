@@ -17,8 +17,21 @@
   </div>
 </div>
 <kendo-drawer-container>
-  <kendo-drawer #drawer [items]="items" mode="push" [mini]="true" [expanded]="true" (select)="onSelect($event)">
+  <kendo-drawer
+  style="flex-basis: 103px;"
+  #drawer [items]="items" 
+  mode="push" [mini]="true"
+   [expanded]="false" 
+   (select)="onSelect($event)">
   </kendo-drawer>
+  <ng-template kendoDrawerTemplate>
+    <form class="k-form" >
+      <label class="k-form-field">
+        <span>First Name</span>
+       
+      </label>
+    </form>
+  </ng-template>
 
   <kendo-drawer-content>
     <h1>Hello</h1>
