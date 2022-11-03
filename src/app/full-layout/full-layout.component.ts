@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit,ViewChild, } from '@angular/core';
+import { Router } from '@angular/router';
 import { DrawerItem, DrawerSelectEvent } from '@progress/kendo-angular-layout';
 
 @Component({
@@ -7,25 +8,25 @@ import { DrawerItem, DrawerSelectEvent } from '@progress/kendo-angular-layout';
   styleUrls: ['./full-layout.component.css']
 })
 export class FullLayoutComponent implements OnInit {
+  @ViewChild('drawer') drawer!: ElementRef ;
 
-  constructor() { }
+  constructor( private router:Router) { }
 
   ngOnInit(): void {
   }
-
-  public selected = "Inbox";
-
   public items: Array<DrawerItem> = [
-    { text: "Inbox", icon: "k-i-inbox", selected: true },
+    { text: "To-Do-List", icon: "k-i-inbox",path:"application/to-do-list" },
     { separator: true },
-    { text: "Notifications", icon: "k-i-bell" },
-    { text: "Calendar", icon: "k-i-calendar" },
+    { text: "Survey", icon: "k-i-bell" ,path:"application/survey"},
     { separator: true },
-    { text: "Attachments", icon: "k-i-envelop-link" },
-    { text: "Favourites", icon: "k-i-star-outline" },
+    { text: "Chats", icon: "k-i-calendar",path:"application/chats" },
+    // { separator: true },
+    // { text: "Attachments", icon: "k-i-envelop-link" },
+    // { text: "Favourites", icon: "k-i-star-outline" },
   ];
 
   public onSelect(ev: DrawerSelectEvent): void {
-    this.selected = ev.item.text;
+    // console.log(ev)
+    this.router.navigate([ev.item.path])
   }
 }
