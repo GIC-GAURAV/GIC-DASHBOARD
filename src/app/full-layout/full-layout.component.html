@@ -1,6 +1,7 @@
 <div class="custom-toolbar">
   <div class="left-nav">
-    <button kendoButton icon="menu" fillMode="flat" (click)="drawer.toggle()"></button>
+    <!-- (click)="drawer.toggle()" -->
+    <button kendoButton icon="menu" fillMode="flat"></button>
     <div class="search">
       <input placeholder="Search...">
       <span class="search-icon k-icon k-i-search">
@@ -17,21 +18,15 @@
   </div>
 </div>
 <kendo-drawer-container>
-  <kendo-drawer
-  style="flex-basis: 103px;"
-  #drawer [items]="items" 
-  mode="push" [mini]="true"
-   [expanded]="false" 
-   (select)="onSelect($event)">
+  <kendo-drawer style="flex-basis: 100px;" #drawer [items]="items" mode="push" [mini]="true" [expanded]="false">
+    <ng-template kendoDrawerTemplate>
+      <div class="menu" *ngFor="let item of items" (click)="onSelect(item)">
+        <span class="{{item.icon}}"></span>
+        {{item.text}}
+      </div>
+    </ng-template>
   </kendo-drawer>
-  <ng-template kendoDrawerTemplate>
-    <form class="k-form" >
-      <label class="k-form-field">
-        <span>First Name</span>
-       
-      </label>
-    </form>
-  </ng-template>
+
 
   <kendo-drawer-content>
     <h1>Hello</h1>

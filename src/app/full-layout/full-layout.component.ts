@@ -20,18 +20,19 @@ export class FullLayoutComponent implements OnInit {
   ngOnInit(): void {
   }
   public items: Array<customDrawerItem> = [
-    { text: "To-Do-List", icon: "k-i-inbox",path:"application/to-do-list" },
+    { text: "To-Do-List", icon: "k-icon k-i-inbox",path:"application/to-do-list" },
   
-    { text: "Survey", icon: "k-i-bell" ,path:"application/survey"},
-    { text: "Chats", icon: "k-i-calendar",path:"application/chats" },
+    { text: "Survey", icon: "k-icon k-i-bell" ,path:"application/survey"},
+    { text: "Chats", icon: "k-icon k-i-calendar",path:"application/chats" },
     // { separator: true },
     // { text: "Attachments", icon: "k-i-envelop-link" },
     // { text: "Favourites", icon: "k-i-star-outline" },
   ];
 
-  public onSelect(ev: DrawerSelectEvent): void {
+  public onSelect(ev: any): void {
     // console.log(ev)
-    this.router.navigate([ev.item.path])
+    this.router.navigate([ev.path])
+    // drawer2?.toogle()
   }
 }
 
