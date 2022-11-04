@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LayoutModule } from "@progress/kendo-angular-layout";
 import { ButtonsModule } from "@progress/kendo-angular-buttons";
 import { IconsModule } from "@progress/kendo-angular-icons";
+import { InputsModule } from '@progress/kendo-angular-inputs';
 
 @NgModule({
   declarations: [],
@@ -10,12 +11,14 @@ import { IconsModule } from "@progress/kendo-angular-icons";
     CommonModule,
     LayoutModule,
     ButtonsModule,
-    IconsModule
+    IconsModule,
+    InputsModule
   ],
   exports:[
     LayoutModule,
     ButtonsModule,
-    IconsModule
+    IconsModule,
+    InputsModule
   ]
 })
 export class SharedModule { }

@@ -1,16 +1,7 @@
-html,
-body,
-my-app {
-  padding: 0;
-  height: 100%;
-}
 
-my-app {
-  display: flex;
-  flex-direction: column;
-}
-
+@import "./../../styles.css";
 kendo-drawer-container {
+  --primaryColor:#145388
   flex: 1 1 auto;
   overflow-y: auto;
   height: calc(100vh - 90px);
@@ -18,29 +9,52 @@ kendo-drawer-container {
 
 kendo-drawer-content{
   padding: 20px 30px;
+  
 }
 .k-icon {
   font-size: 20px;
+  
 }
 
 .custom-toolbar {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
   align-items: center;
   box-sizing: border-box;
   background: #fff;
-  height: 90px;
+  height: 8.4rem;
   overflow: hidden;
-  padding: 1.5rem 40px;
+  padding: 1.5rem 3rem;
   box-shadow: 0 2px 15px 5px rgb(0 0 0 / 8%)
 }
 .search{
     position: relative;
-    width: 230px;
-    border-radius: 20px;
+    width: 23rem;
+    border-radius: 2rem;
     background: #f8f8f8;
-    margin-left: 30px;
+    margin-left: 4rem;
+    font-size: 1.2rem;
+}
+.search input{
+  border: initial;
+  background: transparent;
+  outline: initial!important;
+  font-size: 1.5rem;
+  width: 93%;
+  color: #3a3a3a;
+  padding: 0.4rem 1.5rem;
+  line-height: 2;
+  box-sizing: border-box;
+}
+.search span{
+  font-size: 2rem;
+  color: #d7d7d7;
+  position: absolute;
+  bottom: 9px;
+  right: 10px;
+  text-align: center;
+  cursor: pointer;
 }
 .brand-icon{
   display: flex;
@@ -50,30 +64,7 @@ kendo-drawer-content{
 .brand-icon img{
   width: 80px;
 }
-.search input{
-  border: initial;
-    background: transparent;
-    outline: initial!important;
-    font-size: .8rem;
-    width: 93%;
-    color: #3a3a3a;
-    padding: 0.4rem 1rem;
-    padding-right: 25px;
-    line-height: 2;
-    box-sizing: border-box;
-}
-.search span{
-  font-size: 17px;
-    border-radius: 10px;
-    color: #d7d7d7;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    bottom: -2px;
-    right: 3px;
-    text-align: center;
-    cursor: pointer;
-}
+
 .left-nav {
   display: flex;
   height: fit-content;
@@ -83,8 +74,8 @@ kendo-drawer-content{
   justify-content: end;
 }
 .right-nav .profile{
-  width: 44px;
-  height: 44px;
+  width: 35px;
+  height: 35px;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -95,4 +86,31 @@ kendo-drawer-content{
 .menu .icon{
   font-size: 32px;
   line-height: 42px;
+}
+
+.language{
+  margin-left: 1.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 2rem;
+  color: #8f8f8f;
+  background-color: #f8f8f8;
+}
+.language-caret{
+  font-size: 10px; 
+}
+
+.buy{
+  font-size: 1.2rem;
+  margin-left: 1.4rem;
+  border: 1px solid #145388;;
+  padding: 0 2rem;
+  border-radius: 2rem;
+  color: #145388;
+  background-color: transparent;
+}
+.buy:hover{
+  background-color: #145388;
+  color: #fff;
 }
