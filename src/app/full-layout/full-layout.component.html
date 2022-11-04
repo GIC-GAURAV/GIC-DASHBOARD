@@ -21,7 +21,8 @@
   <kendo-drawer style="flex-basis: 100px;" #drawer [items]="items" mode="push" [mini]="true" [expanded]="false">
     <ng-template kendoDrawerTemplate>
       <div class="menu" *ngFor="let item of items" (click)="onSelect(item)">
-        <span class="{{item.icon}}"></span>
+        <!-- <span class="{{item.icon}}"></span> -->
+        <i class="icon-social-youtube"></i>
         {{item.text}}
       </div>
     </ng-template>

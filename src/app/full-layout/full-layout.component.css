@@ -91,3 +91,8 @@ kendo-drawer-content{
 .right-nav .profile img{
   width: -webkit-fill-available;
 }
+
+.menu .icon{
+  font-size: 32px;
+  line-height: 42px;
+}
