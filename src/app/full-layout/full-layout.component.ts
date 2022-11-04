@@ -13,7 +13,7 @@ export class FullLayoutComponent implements OnInit {
   @ViewChild('drawer') drawer!: ElementRef ;
 
 
-  custometoggle:boolean=false;
+  custometoggle:boolean=true;
   constructor( private router:Router) {
     
   }
