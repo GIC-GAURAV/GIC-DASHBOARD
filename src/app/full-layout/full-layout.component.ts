@@ -14,14 +14,14 @@ export class FullLayoutComponent implements OnInit {
 
 
   constructor( private router:Router) {
-    
+
   }
 
   ngOnInit(): void {
   }
   public items: Array<customDrawerItem> = [
     { text: "To-Do-List", icon: "k-icon k-i-inbox",path:"application/to-do-list" },
-  
+
     { text: "Survey", icon: "k-icon k-i-bell" ,path:"application/survey"},
     { text: "Chats", icon: "k-icon k-i-calendar",path:"application/chats" },
     // { separator: true },

@@ -9,11 +9,11 @@ kendo-drawer-container {
 
 kendo-drawer-content{
   padding: 20px 30px;
-  
+
 }
 .k-icon {
   font-size: 20px;
-  
+
 }
 
 .custom-toolbar {
@@ -98,7 +98,7 @@ kendo-drawer-content{
   background-color: #f8f8f8;
 }
 .language-caret{
-  font-size: 10px; 
+  font-size: 10px;
 }
 
 .buy{
@@ -114,3 +114,42 @@ kendo-drawer-content{
   background-color: #145388;
   color: #fff;
 }
+/* Side Bar Css */
+
+
+.wrapper .sidebar{
+	background: #f8f8f8;
+	position: static;
+	left: 0;
+	width: 11rem;
+	height: calc(100% - 9rem);;
+	transition: all 0.5s ease;
+}
+.wrapper .sidebar ul li a{
+	/* display: block; */
+	/* padding: 1px 30px; */
+	/* border-bottom: 1px solid #f3f3f3;;
+	color: #3a3a3a;
+	font-size: 1.6rem;
+	position: relative;
+ height: 11rem;
+ flex-direction: column;
+    justify-content: center; */
+    height: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    border-bottom: 2px solid #f3f3f3;
+    color: #3a3a3a;
+    text-decoration: none;
+}
+
+li:hover {
+  color: #008ecc;
+}
+
+

@@ -1,8 +1,7 @@
-<div class="custom-toolbar">
-  <!-- Left navigation -->
+ <div class="custom-toolbar">
   <div class="left-nav">
     <!-- (click)="drawer.toggle()" -->
-    <button kendoButton icon="menu" fillMode="flat"></button>
+    <button kendoButton icon="menu"  fillMode="flat"></button>
     <div class="search">
       <input placeholder="Search...">
       <span class="search-icon k-icon k-i-search">
@@ -33,11 +32,11 @@
   <!-- end -->
 </div>
 
-<kendo-drawer-container>
+<!-- <kendo-drawer-container>
   <kendo-drawer style="flex-basis: 100px;" #drawer [items]="items" mode="push" [mini]="true" [expanded]="false">
     <ng-template kendoDrawerTemplate>
       <div class="menu" *ngFor="let item of items" (click)="onSelect(item)">
-        <!-- <span class="{{item.icon}}"></span> -->
+        <span class="{{item.icon}}"></span>
         <i class="icon-social-youtube"></i>
         {{item.text}}
       </div>
@@ -46,8 +45,59 @@
 
 
   <kendo-drawer-content>
-    <h1>Hello</h1>
-
     <router-outlet></router-outlet>
   </kendo-drawer-content>
-</kendo-drawer-container>
+</kendo-drawer-container> -->
+<div class="wrapper" #sidebar>
+  <!--Top Menu & Menu button-->
+     <div class="sidebar">
+          <!--Menu item-->
+          <ul>
+            <li>
+                <a href="#">
+
+                  <i class="icon-layers"></i>
+                    <span class="item"> Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="icon-layers"></i></span>
+                    <span class="item">Pages</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="icon-layers"></i></span>
+                    <span class="item">Application</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="icon-layers"></i></span>
+                    <span class="item">UI</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="icon-layers"></i></span>
+                    <span class="item">Menu</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="icon-layers"></i></span>
+                    <span class="item">Blank Page</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="icon-home"></i></span>
+                    <span class="item">Docs</span>
+                </a>
+            </li>
+
+</ul>
+    </div>
+
+ </div>
