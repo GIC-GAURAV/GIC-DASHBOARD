@@ -1,7 +1,7 @@
 <div class="custom-toolbar">
   <div class="left-nav">
-    <!-- (click)="drawer.toggle()" -->
-    <button kendoButton icon="menu" fillMode="flat"></button>
+    
+    <button (click)="drawer.toggle()" kendoButton icon="menu" fillMode="flat"></button>
     <div class="search">
       <input placeholder="Search...">
       <span class="search-icon k-icon k-i-search">
@@ -18,7 +18,7 @@
   </div>
 </div>
 <kendo-drawer-container>
-  <kendo-drawer style="flex-basis: 100px;" #drawer [items]="items" mode="push" [mini]="true" [expanded]="false">
+  <kendo-drawer style="flex-basis: 100px;" #drawer [items]="items" mode="push" [mini]="false" [expanded]="false">
     <ng-template kendoDrawerTemplate>
       <div class="menu" *ngFor="let item of items" (click)="onSelect(item)">
         <!-- <span class="{{item.icon}}"></span> -->
@@ -29,9 +29,8 @@
   </kendo-drawer>
 
 
-  <kendo-drawer-content>
-    <h1>Hello</h1>
-
+  <kendo-drawer-content class="customeSideBar" *ngIf="custometoggle"  (click)="customeToggle()" style="background-color: rgb(255,255,255)">
+    <h1>hello</h1>
     <router-outlet></router-outlet>
   </kendo-drawer-content>
 </kendo-drawer-container>

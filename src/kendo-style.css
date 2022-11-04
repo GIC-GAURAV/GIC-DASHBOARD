@@ -23407,8 +23407,10 @@ kendo-drawer .k-drawer-wrapper {
 }
 
 .k-drawer-content {
-    -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
+    height: -webkit-fill-available;
+    width:26rem;
+    /* -ms-flex: 1 1 auto; */
+        /* flex: 1 1 auto; */
 }
 
 .k-drawer-overlay .k-drawer {

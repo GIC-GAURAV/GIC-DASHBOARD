@@ -13,6 +13,7 @@ export class FullLayoutComponent implements OnInit {
   @ViewChild('drawer') drawer!: ElementRef ;
 
 
+  custometoggle:boolean=false;
   constructor( private router:Router) {
     
   }
@@ -20,10 +21,13 @@ export class FullLayoutComponent implements OnInit {
   ngOnInit(): void {
   }
   public items: Array<customDrawerItem> = [
-    { text: "To-Do-List", icon: "k-icon k-i-inbox",path:"application/to-do-list" },
-  
-    { text: "Survey", icon: "k-icon k-i-bell" ,path:"application/survey"},
-    { text: "Chats", icon: "k-icon k-i-calendar",path:"application/chats" },
+    { text: "dashboards", icon: "icon-social-youtube",path:"application/to-do-list" },
+    { text: "pages", icon: "icon-social-youtube" ,path:"application/survey"},
+    { text: "Applications", icon: "k-icon k-i-calendar",path:"application/chats" },
+    { text: "UI", icon: "icon-social-youtube" ,path:"application/survey"},
+    { text: "Menu", icon: "k-icon k-i-calendar",path:"application/chats" },
+    { text: "Blank Page", icon: "k-icon k-i-calendar",path:"application/chats" },
+    { text: "Docs", icon: "k-icon k-i-calendar",path:"application/chats" },
     // { separator: true },
     // { text: "Attachments", icon: "k-i-envelop-link" },
     // { text: "Favourites", icon: "k-i-star-outline" },
@@ -33,6 +37,9 @@ export class FullLayoutComponent implements OnInit {
     // console.log(ev)
     this.router.navigate([ev.path])
     // drawer2?.toogle()
+  }
+  customeToggle(){
+    this.custometoggle=true;
   }
 }
 
