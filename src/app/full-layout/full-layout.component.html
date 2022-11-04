@@ -1,6 +1,21 @@
-<div class="custom-toolbar">
+<div class="custom-toolbar" [class.custom-toolbar-mobile-search]="isMobilesearchbarShow">
+
+  <div class="mobile-searchbar" [class.show]="isMobilesearchbarShow">
+    <kendo-textbox
+        placeholder="Search"
+        [clearButton]="true"
+      >
+        <ng-template kendoTextBoxSuffixTemplate>
+          <!-- <kendo-textbox-separator></kendo-textbox-separator> -->
+          <button kendoButton class="send-button" icon="search"></button>
+          <!-- <kendo-textbox-separator></kendo-textbox-separator> -->
+          <button kendoButton fillMode="clear" class="send-button" icon="close" (click)="hideSearchbar()"></button>
+        </ng-template>
+      </kendo-textbox>
+  </div>
+
   <!-- Left navigation -->
-  <div class="left-nav">
+  <div class="left-nav" [class.hide]="isMobilesearchbarShow">
     <!-- (click)="drawer.toggle()" -->
     <button kendoButton icon="menu" fillMode="flat"></button>
     <div class="search">
@@ -8,25 +23,38 @@
       <span class="search-icon k-icon k-i-search">
       </span>
     </div>
+    <div class="mobile-search-icon" (click)="showSearchbar()">
+      <span class="search-icon k-icon k-i-search">
+      </span>
+    </div>
+
     <button class="language" kendoButton>EN <span class="language-caret">▼</span></button>
     <button class="buy" kendoButton>BUY</button>
   </div>
   <!-- end -->
 
   <!-- Icon -->
-  <div class="brand-icon">
+  <div class="brand-icon" [class.hide]="isMobilesearchbarShow">
     <img src="assets/images/gic-icon.png" alt="">
   </div>
   <!-- end -->
 
   <!-- Right navigation -->
-  <div class="right-nav">
-    <div class="dark-mode">
-      <kendo-switch></kendo-switch>
+  <div class="right-nav" [class.hide]="isMobilesearchbarShow">
+    <div class="right-nav-sub dark-mode">
+      <kendo-switch onLabel="" offLabel=""></kendo-switch>
     </div>
-    <div class="account"></div>
-    <div class="notification"></div>
-    <div class="profile">
+    <div class="right-nav-sub account">
+      <i class="icon simple-icon-grid"></i>
+    </div>
+    <div class="right-nav-sub notification">
+      <i class="icon simple-icon-bell"></i>
+      <span class="count">3</span>
+    </div>
+    <div class="right-nav-sub fullscreen">
+      <i class="icon simple-icon-size-fullscreen"></i>
+    </div>
+    <div class="right-nav-sub profile">
       <img src="https://www.theb2bhouse.com/wp-content/uploads/2020/10/Oprah-Picture-300x287.png" alt="">
     </div>
   </div>

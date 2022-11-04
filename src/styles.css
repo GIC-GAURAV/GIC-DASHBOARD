@@ -86,3 +86,40 @@ kendo-drawer .k-drawer-wrapper .menu{
 kendo-drawer .k-drawer-wrapper .menu i{
     font-size: 32px;
   }
+
+.dark-mode .k-switch-thumb{
+  width: 12px;
+  height: 12px;
+  background-color: #777;
+}
+kendo-switch{
+  width: 32px !important;
+}
+.dark-mode .k-switch-md .k-switch-track{
+  width: 32px !important;
+  height: 16px;
+}
+.k-switch-off .k-switch-track{
+  border: 1px solid #777;;
+}
+.k-switch-on .k-switch-thumb {
+  background-color: #fff !important;
+}
+.dark-mode .k-switch-md.k-switch-off .k-switch-thumb-wrap {
+  left: 8px;
+}
+.dark-mode .k-switch-md.k-switch-on .k-switch-thumb-wrap {
+  left: calc(100% - 8px);
+  
+}
+
+.dark-mode .k-switch-md .k-switch-label-off{
+  display: none;
+}
+.dark-mode .k-switch-md .k-switch-label-on{
+  display: none;
+}
+
+
+
+
