@@ -22,6 +22,7 @@
     "@progress/kendo-angular-icons": "^2.0.2",
     "@progress/kendo-angular-inputs": "^10.1.1",
     "@progress/kendo-angular-layout": "^7.1.5",
+    "@progress/kendo-angular-tooltip": "^4.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

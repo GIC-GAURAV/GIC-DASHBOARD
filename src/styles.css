@@ -65,7 +65,10 @@ line-height: 1.7;
 color: #777
 }
 
-
+.k-tooltip{
+  background-color: white !important;
+  color: black !important;
+}
 
 kendo-drawer{
     border-top-right-radius: 10px;
@@ -120,6 +123,13 @@ kendo-switch{
   display: none;
 }
 
-
-
-
+.container{
+  display: grid;
+}
+.container .col{
+  padding: 8px 0px;
+  font-size: 1.2rem;
+}
+kendo-tooltip{
+  width: 130px;
+}

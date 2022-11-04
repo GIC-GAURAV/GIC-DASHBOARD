@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit,ViewChild, } from '@angular/core';
 import { Router } from '@angular/router';
 import { DrawerItem, DrawerSelectEvent } from '@progress/kendo-angular-layout';
+import { TooltipDirective } from '@progress/kendo-angular-tooltip';
 
 @Component({
   selector: 'app-full-layout',
@@ -11,7 +12,14 @@ import { DrawerItem, DrawerSelectEvent } from '@progress/kendo-angular-layout';
 
 export class FullLayoutComponent implements OnInit {
   @ViewChild('drawer') drawer!: ElementRef ;
+  @ViewChild(TooltipDirective)
+  tooltipDir: TooltipDirective | undefined;
 
+  public showTooltip(eventTarget: Element): void {
+    // 4. Use the public API
+    console.log(eventTarget)
+    this.tooltipDir?.toggle(eventTarget);
+  }
 
   constructor( private router:Router) {
     

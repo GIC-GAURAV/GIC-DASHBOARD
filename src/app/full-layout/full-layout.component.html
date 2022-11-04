@@ -27,8 +27,14 @@
       <span class="search-icon k-icon k-i-search">
       </span>
     </div>
-
-    <button class="language" kendoButton>EN <span class="language-caret">▼</span></button>
+    <ng-template #template let-anchor class="language-tooltip">
+      <div class="container" style="grid-template-columns: auto; row-gap: 10px;">
+        <div class="col">English</div>
+        <div class="col">Español</div>
+        <div class="col">English - RTL</div>
+    </div>
+    </ng-template>
+    <button kendoTooltip [tooltipTemplate]="template" title=""  showOn="click" class="language" kendoButton>EN <span class="language-caret">▼</span></button>
     <button class="buy" kendoButton>BUY</button>
   </div>
   <!-- end -->
@@ -79,3 +85,7 @@
     <router-outlet></router-outlet>
   </kendo-drawer-content>
 </kendo-drawer-container>
+
+
+<!-- Tooltips -->
+<!-- 1.) Language -->
