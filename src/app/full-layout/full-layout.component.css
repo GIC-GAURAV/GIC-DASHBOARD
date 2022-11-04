@@ -84,18 +84,17 @@ kendo-drawer-content{
 }
 
 .menu .icon{
-  font-size: 32px;
-  line-height: 42px;
-  padding: 2px;
+  font-size: 2rem;
+  line-height: 2.625rem;
+  /* padding: 2px; */
 }
 .menu ,li{
-  border: 1.5px solid rgb(248,248,248);
+  border: 0.094rem solid rgb(248,248,248);
+  
 }
-.menu ,li{
-  border-right: 1px solid rgb(248,248,248);
-}
+
 .customeSideBar{
-  border: 1px solid rgb(248,248,248);
+  border: 0.094px solid rgb(248,248,248);
   border-top-right-radius: 2rem;
   background-color: rgb(255,255,255);
 }

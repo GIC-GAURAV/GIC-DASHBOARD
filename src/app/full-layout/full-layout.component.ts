@@ -13,7 +13,7 @@ export class FullLayoutComponent implements OnInit {
   @ViewChild('drawer') drawer!: ElementRef ;
 
 
-  custometoggle:boolean=true;
+  custometoggle:boolean=false;
   constructor( private router:Router) {
     
   }
@@ -34,13 +34,12 @@ export class FullLayoutComponent implements OnInit {
   ];
 
   public onSelect(ev: any): void {
+    this.custometoggle=true;
     // console.log(ev)
     this.router.navigate([ev.path])
     // drawer2?.toogle()
   }
-  customeToggle(){
-    this.custometoggle=true;
-  }
+ 
 }
 
 interface customDrawerItem extends DrawerItem {
