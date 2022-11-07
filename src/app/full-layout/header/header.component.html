@@ -81,9 +81,68 @@
         </div>
         </ng-template>
       </div>
-      <div class="right-nav-sub notification">
+      <div class="right-nav-sub notification"  kendoTooltip [tooltipTemplate]="notification" title="" showOn="click" [tooltipWidth]="300">
         <i class="icon simple-icon-bell"></i>
         <span class="count">3</span>
+        <ng-template #notification let-anchor >
+            <div class="container notification-tooltips" style="grid-template-columns: auto; row-gap: 6px;">
+              <div class="col">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+                    </div>
+                    <div class="notification-content">
+                        <p>Joisse Kaycee just sent a new comment!</p>
+                        <div class="text-muted">09.04.2018 - 12:45</div>
+                    </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+                    </div>
+                    <div class="notification-content">
+                        <p>Joisse Kaycee just sent a new comment!</p>
+                        <div class="text-muted">09.04.2018 - 12:45</div>
+                    </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+                    </div>
+                    <div class="notification-content">
+                        <p>Joisse Kaycee just sent a new comment!</p>
+                        <div class="text-muted">09.04.2018 - 12:45</div>
+                    </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+                    </div>
+                    <div class="notification-content">
+                        <p>Joisse Kaycee just sent a new comment!</p>
+                        <div class="text-muted">09.04.2018 - 12:45</div>
+                    </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+                    </div>
+                    <div class="notification-content">
+                        <p>Joisse Kaycee just sent a new comment!</p>
+                        <div class="text-muted">09.04.2018 - 12:45</div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
       </div>
       <div class="right-nav-sub fullscreen">
         <i class="icon simple-icon-size-fullscreen"></i>

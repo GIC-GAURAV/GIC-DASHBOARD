@@ -212,7 +212,40 @@
 .account-tooltip .col:hover,.account-tooltip .col:hover div{
     color: #145388;
 }
+.notification-tooltips{
+    padding: 10px;
+    max-height: 25rem;
+    overflow: auto;
+}
+.notification-tooltips .wrapper{
+    display: grid;
+    padding: 5px 0;
+    grid-template-columns: 1fr 4fr;
+}
 
+.notification-tooltips .wrapper .img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notification-tooltips .wrapper img{
+    width: 40px;
+    border-radius: 50%;
+}
+.notification-tooltips .wrapper .notification-content{
+    padding-left: 12px;
+}
+.notification-tooltips .wrapper p{
+    color: #3a3a3a;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    font-family: Nunito,sans-serif;
+}
+.notification-tooltips .wrapper .text-muted{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
 
 @media only screen and (max-width: 62em) {
   .search{
