@@ -21,13 +21,13 @@ export class FullLayoutComponent implements OnInit {
   ngOnInit(): void {
   }
   public items: Array<customDrawerItem> = [
-    { text: "dashboards", icon: "icon-social-youtube",path:"application/to-do-list" },
+    { text: "dashboards", icon: "k-i-inbox",path:"application/to-do-list" },
     { text: "pages", icon: "icon-social-youtube" ,path:"application/survey"},
     { text: "Applications", icon: "k-icon k-i-calendar",path:"application/chats" },
-    { text: "UI", icon: "icon-social-youtube" ,path:"application/survey"},
+    { text: "UI", icon:"k-i-clip" ,path:"application/survey"},
     { text: "Menu", icon: "k-icon k-i-calendar",path:"application/chats" },
     { text: "Blank Page", icon: "k-icon k-i-calendar",path:"application/chats" },
-    { text: "Docs", icon: "k-icon k-i-calendar",path:"application/chats" },
+    { text: "Docs", icon: "k-i-files",path:"application/chats" },
     // { separator: true },
     // { text: "Attachments", icon: "k-i-envelop-link" },
     // { text: "Favourites", icon: "k-i-star-outline" },
