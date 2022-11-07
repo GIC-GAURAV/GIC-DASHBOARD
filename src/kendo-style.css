@@ -23448,12 +23448,24 @@ kendo-drawer .k-drawer-wrapper {
         order: 1;
 }
 
-.k-drawer-wrapper {
+.k-drawer-wrapper:hover {
     overflow-x: hidden;
     overflow-y: auto;
+    overflow: auto;
+    -webkit-text-fill-color: black;
+    color: rgba(0, 0, 0, 0);
+    transition: color 1.3s ease;
+}
+
+.k-drawer-wrapper {
+    position: static;
+    overflow-x: none;
+    overflow-y: none;
     scrollbar-width: thin;
     transition: all 300ms ease-in-out;
 }
+
+
 
 .k-drawer-wrapper::-webkit-scrollbar {
     width: 7px;

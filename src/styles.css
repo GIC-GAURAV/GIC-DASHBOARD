@@ -81,8 +81,21 @@ kendo-drawer .k-drawer-wrapper .menu{
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
+    cursor: pointer;
   }
+
+  kendo-drawer .k-drawer-wrapper .subMenu{
+    display: flex !important;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+  }
+
+
+
   
 kendo-drawer .k-drawer-wrapper .menu i{
     font-size: 32px;
   }
+
+ 

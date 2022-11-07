@@ -2,7 +2,7 @@
   <!-- Left navigation -->
   <div class="left-nav">
     
-    <button (click)="drawer.toggle()" kendoButton icon="menu" fillMode="flat"></button>
+    <button (click)="toggleUpDown(drawer ,drawer2)" kendoButton icon="menu" fillMode="flat"></button>
     <div class="search">
       <input placeholder="Search...">
       <span class="search-icon k-icon k-i-search">
@@ -34,19 +34,33 @@
 </div>
 
 <kendo-drawer-container>
-  <kendo-drawer style="flex-basis: 100px;" #drawer [items]="items" mode="push" [mini]="false" [expanded]="false">
+  <kendo-drawer id="drawer"  #drawer [items]="items" mode="push" [mini]="false" [expanded]="false">
     <ng-template kendoDrawerTemplate>
-      <div class="menu" *ngFor="let item of items" (click)="onSelect(item)">
+
+      <div  class="menu"  *ngFor="let item of items" 
+      [ngStyle]="{'border-left': item.active ? '5px solid rgb(55, 0, 255)' : 'none'}"
+      (click)="onSelect(item,drawer2)">
+
+      <i class="{{ item.icon }} sideActive"></i>
+      {{item.text}}
+
+      </div>
+    </ng-template>
+  </kendo-drawer>
+
+
+  <kendo-drawer style="box-shadow: 16px 0 17px -7px rgb(0 0 0 / 8%);    border-top: 0.1px solid;
+
+" id="drawer2"  #drawer2 [items]="subItems" mode="push" [mini]="false" [expanded]="false">
+    <ng-template kendoDrawerTemplate>
+      <div class="subMenu" *ngFor="let item of subItems" (click)="onSelectSubItem(item,drawer2)">
         <!-- <span class="{{item.icon}}"></span> -->
-        <i class="icon-social-youtube"></i>
+        <i class="{{ item.icon }}" style="padding-right:10px"></i>
         {{item.text}}
       </div>
     </ng-template>
   </kendo-drawer>
 
 
-  <kendo-drawer-content class="customeSideBar" *ngIf="custometoggle"   >
-    <h1>hello</h1>
     <router-outlet></router-outlet>
-  </kendo-drawer-content>
 </kendo-drawer-container>
