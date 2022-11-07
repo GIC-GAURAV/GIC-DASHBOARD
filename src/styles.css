@@ -127,9 +127,39 @@ kendo-switch{
   display: grid;
 }
 .container .col{
-  padding: 8px 0px;
+  /* padding: 10px 15px; */
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
 }
 kendo-tooltip{
   width: 130px;
+  border-radius: 30px;
+  padding: 10px 0 !important;
+}
+.k-popup{
+  width: auto !important;
+}
+
+.f-align-center{
+  align-items: center;
+}
+.f-align-justify-center{
+  justify-content: center;
+  align-items: center;
+}
+.f-justify-center{
+  justify-content: center;
+
+}
+.account-tooltip .col .icon{
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.sepator{
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
 }

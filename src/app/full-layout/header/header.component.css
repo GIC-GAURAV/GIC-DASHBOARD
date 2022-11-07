@@ -1,0 +1,252 @@
+
+.k-icon {
+  font-size: 20px;
+  
+}
+
+.custom-toolbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  align-items: center;
+  box-sizing: border-box;
+  background: #fff;
+  height: 8.4rem;
+  overflow: hidden;
+  padding: 1.5rem 3rem;
+  box-shadow: 0 2px 15px 5px rgb(0 0 0 / 8%)
+}
+
+.custom-toolbar-mobile-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  box-sizing: border-box;
+  background: #fff;
+  height: 8.4rem;
+  overflow: hidden;
+  padding: 1.5rem 3rem;
+  box-shadow: 0 2px 15px 5px rgb(0 0 0 / 8%)
+}
+
+.search{
+    position: relative;
+    width: 23rem;
+    border-radius: 2rem;
+    background: #f8f8f8;
+    margin-left: 4rem;
+    font-size: 1.2rem;
+}
+.search input{
+  border: initial;
+  background: transparent;
+  outline: initial!important;
+  font-size: 1.5rem;
+  width: 93%;
+  color: #3a3a3a;
+  padding: 0.4rem 1.5rem;
+  line-height: 2;
+  box-sizing: border-box;
+}
+.search span{
+  font-size: 2rem;
+  color: #d7d7d7;
+  position: absolute;
+  bottom: 9px;
+  right: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mobile-search-icon{
+  margin-left: 1.4rem;
+  display: none;
+}
+
+.mobile-searchbar{
+  display: none;
+  width: 100%;
+}
+.mobile-searchbar kendo-textbox{
+  border: none;
+  background: transparent;
+  outline: none!important;
+  font-size: 1.5rem;
+  width: 100%;
+  color: #3a3a3a;
+  padding: 0.4rem 1.5rem;
+  line-height: 2;
+  box-sizing: border-box;
+}
+.mobile-searchbar kendo-textbox button{
+  border: none;
+  background: transparent;
+  outline: none!important;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+}
+
+.notification{
+  position: relative;
+}
+
+.notification .count{
+  font-size: 9px;
+  color: #145388;
+  border: 1px solid #145388;
+  border-radius: 10px;
+  position: absolute;
+  width: 18px;
+  height: 15px;
+  text-align: center;
+  font-weight: 700;
+  top: -16px;
+  right: -9px;
+  line-height: 14px;
+}
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none !important;
+}
+
+.brand-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-icon img{
+  width: 80px;
+}
+
+.left-nav {
+  display: flex;
+  height: fit-content;
+  align-items: center;
+}
+.left-nav button{
+  line-height: 3;
+}
+.right-nav{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.right-nav .right-nav-sub{
+  margin: 0 1rem;
+}
+.right-nav .profile{
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.right-nav .profile img{
+  width: -webkit-fill-available;
+}
+.right-nav .icon{
+  font-size: 16px;
+  color: #8f8f8f;
+}
+.right-nav .icon:hover{
+  color: #145388;
+}
+.menu .icon{
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.language{
+  margin-left: 1.4rem;
+  font-size: 1.2rem;
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 2rem;
+  color: #8f8f8f;
+  background-color: #f8f8f8;
+}
+.language-caret{
+  font-size: 10px; 
+}
+
+.buy{
+  font-size: 1.2rem;
+  margin-left: 1.4rem;
+  border: 1px solid #145388;
+  padding: 0 2rem;
+  border-radius: 2rem;
+  color: #145388;
+  background-color: transparent;
+}
+.buy:hover{
+  background-color: #145388;
+  color: #fff;
+}
+ .language-tooltip .col, .profile-tooltips .col{
+    padding: 1rem 1.8rem;
+}
+.language-tooltip .col:hover, .profile-tooltips .col:hover{
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+.account-tooltip{
+    padding: 10px;
+    
+}
+.account-tooltip .col{
+    padding: 7px;
+    cursor: pointer;
+}
+
+.account-tooltip .col div{
+    text-align: center;
+    padding: 0 10px;
+    color: #6d6d6d;
+    line-height: 14px;
+    font-size: 1.2rem;
+}
+.account-tooltip .col:hover,.account-tooltip .col:hover div{
+    color: #145388;
+}
+
+
+@media only screen and (max-width: 62em) {
+  .search{
+    position: relative;
+    width: 13rem;
+    border-radius: 2rem;
+    background: #f8f8f8;
+    margin-left: 4rem;
+    font-size: 1.2rem;
+  }
+  .buy{
+    display: none;
+  }
+
+
+
+}
+@media only screen and (max-width: 48em) {
+  .dark-mode{
+    display: none;
+  }
+  .search{
+    display: none;
+  }
+  .mobile-search-icon{
+    display: block;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .right-nav .account, .fullscreen{
+    display: none;
+  }
+  .custom-toolbar{
+    padding: 1.5rem 1.5rem;
+  }
+
+}

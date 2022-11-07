@@ -43,14 +43,9 @@ export class FullLayoutComponent implements OnInit {
     // drawer2?.toogle()
   }
 
-  isMobilesearchbarShow = false
+  
 
-  showSearchbar(){
-    this.isMobilesearchbarShow = true
-  }
-  hideSearchbar(){
-    this.isMobilesearchbarShow = false
-  }
+
 }
 
 interface customDrawerItem extends DrawerItem {
