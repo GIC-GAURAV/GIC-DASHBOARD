@@ -1,7 +1,7 @@
-<kendo-card style="width: 100%;    padding: 22px;
+<kendo-card style="width: 100%;padding: 22px;
 ">
-<kendo-card-header>Form</kendo-card-header>
-<kendo-card-body>
+<kendo-card-header style="font-size: 30px;">Form</kendo-card-header>
+<kendo-card-body class="form">
   <form  [formGroup]="form">
     <div class="rows">
 
@@ -18,10 +18,9 @@
         <kendo-label text="Select "></kendo-label>
         <kendo-dropdownlist formControlName="sendData" [data]="sendData"> </kendo-dropdownlist>
       </div>
-      <div class="cols" style="text-align: -webkit-center;
-      padding: 19px;">
+      <div class="cols" style="    text-align: -webkit-right; padding: 19px;">
 
-        <button kendoButton  (click)="submitForm()">Submit</button>
+        <button kendoButton [primary]="true" (click)="submitForm()">Submit</button>
       </div>
     </div>
   </form>
