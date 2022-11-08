@@ -11,5 +11,15 @@ export class DemoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public listItems: Array<string> = [
+    "Baseball",
+    "Basketball",
+    "Cricket",
+    "Field Hockey",
+    "Football",
+    "Table Tennis",
+    "Tennis",
+    "Volleyball",
+  ];
 
 }
