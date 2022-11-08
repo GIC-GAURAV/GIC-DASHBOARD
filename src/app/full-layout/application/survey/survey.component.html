@@ -1,1 +1,74 @@
-<p>survey works!</p>
+<div class="container">
+    <div class="header">
+        <div class="left-header">
+            <h1>Survey</h1>
+            <ul>
+                <li>
+                    <a>Home &#8739;</a>
+                    <a>Applications &#8739;</a>
+                    <a>Survey</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right-header">
+            <button kendoButton class="addNew">ADD NEW</button>
+            <kendo-dropdownlist class="drop-down-one" [data]="listItems"> </kendo-dropdownlist>
+        </div>
+    </div>
+    <div class="second-row">
+        <kendo-dropdownlist class="drop-down-two" placeholder="Order By : Title " [data]="listItems">
+        </kendo-dropdownlist>
+        <div class="search">
+            <input placeholder="Search...">
+            <span class="search-icon k-icon k-i-search">
+            </span>
+        </div>
+
+
+    </div>
+    <div class="border"></div>
+
+    <div class="card">
+        <kendo-card class="kendoCard">
+            <kendo-card-header class="k-hstack card-header">
+                <kendo-avatar width="10px" height="10px" shape="rectangle"></kendo-avatar>
+                <div class="contain">
+                    <h1 kendoCardTitle>Developer Survey</h1>
+                    <p kendoCardSubtitle>Development</p>
+                    <p kendoCardSubtitle>17.05.2021</p>
+                    <p class="education">EDUCATION</p>
+                    <kendo-label class="k-checkbox-label" [for]="notification"></kendo-label>
+                    <input type="checkbox" #notification kendoCheckBox />
+                </div>
+            </kendo-card-header>
+        </kendo-card>
+        <kendo-card class="kendoCard">
+            <kendo-card-header class="k-hstack card-header">
+                <kendo-avatar width="10px" height="10px" shape="rectangle"></kendo-avatar>
+                <div class="contain">
+                    <h1 kendoCardTitle>Designer Survey</h1>
+                    <p kendoCardSubtitle>Workplace</p> 
+                    <p kendoCardSubtitle>15.05.2021</p>
+                    <p class="new-framework">NEW FRAMEWORK</p>
+                    <kendo-label class="k-checkbox-label" [for]="notification"></kendo-label>
+                    <input type="checkbox" #notification kendoCheckBox />
+                </div>
+            </kendo-card-header>
+        </kendo-card>
+        <kendo-card class="kendoCard">
+            <kendo-card-header class="k-hstack card-header">
+                <kendo-avatar  class="avtar" width="10px" height="10px" shape="rectangle"></kendo-avatar>
+                <div class="contain">
+                    <h1 kendoCardTitle>Backend Survey</h1>
+                    <p kendoCardSubtitle>Hardware</p>
+                    <p kendoCardSubtitle>12.05.2021</p>
+                    <p class="personal">PERSONAL</p>
+                    <kendo-label class="k-checkbox-label" [for]="notification"></kendo-label>
+                    <input type="checkbox" #notification kendoCheckBox />
+                </div>
+            </kendo-card-header>
+        </kendo-card>
+    </div>
+
+
+</div>

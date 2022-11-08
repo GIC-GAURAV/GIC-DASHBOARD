@@ -4,6 +4,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { LayoutModule } from '@progress/kendo-angular-layout';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+import { LabelModule } from '@progress/kendo-angular-label';
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -13,7 +22,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    LayoutModule,
+    InputsModule,
+    LabelModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

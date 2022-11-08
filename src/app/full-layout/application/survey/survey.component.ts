@@ -12,4 +12,10 @@ export class SurveyComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public listItems: Array<string> = [
+    "Action",
+    "Another Action",
+   
+  ];
+
 }
