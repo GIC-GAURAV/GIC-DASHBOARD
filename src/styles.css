@@ -65,7 +65,10 @@ line-height: 1.7;
 color: #777
 }
 
-
+.k-tooltip{
+  background-color: white !important;
+  color: black !important;
+}
 
 kendo-drawer{
     border-top-right-radius: 10px;
@@ -98,4 +101,80 @@ kendo-drawer .k-drawer-wrapper .menu i{
     font-size: 32px;
   }
 
- 
+.dark-mode .k-switch-thumb{
+  width: 12px;
+  height: 12px;
+  background-color: #777;
+}
+kendo-switch{
+  width: 32px !important;
+}
+.dark-mode .k-switch-md .k-switch-track{
+  width: 32px !important;
+  height: 16px;
+}
+.k-switch-off .k-switch-track{
+  border: 1px solid #777;;
+}
+.k-switch-on .k-switch-thumb {
+  background-color: #fff !important;
+}
+.dark-mode .k-switch-md.k-switch-off .k-switch-thumb-wrap {
+  left: 8px;
+}
+.dark-mode .k-switch-md.k-switch-on .k-switch-thumb-wrap {
+  left: calc(100% - 8px);
+  
+}
+
+.dark-mode .k-switch-md .k-switch-label-off{
+  display: none;
+}
+.dark-mode .k-switch-md .k-switch-label-on{
+  display: none;
+}
+
+.container{
+  display: grid;
+}
+.container .col{
+  /* padding: 10px 15px; */
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+kendo-tooltip{
+  width: 130px;
+  border-radius: 30px;
+  padding: 10px 0 !important;
+}
+.k-popup{
+  width: auto !important;
+}
+
+.f-align-center{
+  align-items: center;
+}
+.f-align-justify-center{
+  justify-content: center;
+  align-items: center;
+}
+.f-justify-center{
+  justify-content: center;
+
+}
+.account-tooltip .col .icon{
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.sepator{
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
+.text-muted{
+  color: #909090!important;
+}

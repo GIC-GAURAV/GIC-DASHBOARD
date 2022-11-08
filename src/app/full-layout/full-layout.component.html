@@ -1,38 +1,5 @@
-<div class="custom-toolbar">
-  <!-- Left navigation -->
-  <div class="left-nav">
-    
-    <button (click)="toggleUpDown(drawer ,drawer2)" kendoButton icon="menu" fillMode="flat"></button>
-    <div class="search">
-      <input placeholder="Search...">
-      <span class="search-icon k-icon k-i-search">
-      </span>
-    </div>
-    <button class="language" kendoButton>EN <span class="language-caret">▼</span></button>
-    <button class="buy" kendoButton>BUY</button>
-  </div>
-  <!-- end -->
 
-  <!-- Icon -->
-  <div class="brand-icon">
-    <img src="assets/images/gic-icon.png" alt="">
-  </div>
-  <!-- end -->
-
-  <!-- Right navigation -->
-  <div class="right-nav">
-    <div class="dark-mode">
-      <kendo-switch></kendo-switch>
-    </div>
-    <div class="account"></div>
-    <div class="notification"></div>
-    <div class="profile">
-      <img src="https://www.theb2bhouse.com/wp-content/uploads/2020/10/Oprah-Picture-300x287.png" alt="">
-    </div>
-  </div>
-  <!-- end -->
-</div>
-
+<app-header (toggle)="toggleUpDown(drawer,drawer2)" ></app-header>
 <kendo-drawer-container>
   <kendo-drawer id="drawer"  #drawer [items]="items" mode="push" [mini]="false" [expanded]="false">
     <ng-template kendoDrawerTemplate>

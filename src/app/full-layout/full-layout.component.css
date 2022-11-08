@@ -1,7 +1,6 @@
 
 @import "./../../styles.css";
 kendo-drawer-container {
-  --primaryColor:#145388
   flex: 1 1 auto;
   overflow-y: auto;
   height: calc(100vh - 90px);
@@ -9,78 +8,10 @@ kendo-drawer-container {
 
 kendo-drawer-content{
   padding: 20px 30px;
-  
 }
 .k-icon {
   font-size: 20px;
   
-}
-
-.custom-toolbar {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  align-items: center;
-  box-sizing: border-box;
-  background: #fff;
-  height: 8.4rem;
-  overflow: hidden;
-  padding: 1.5rem 3rem;
-  box-shadow: 0 2px 15px 5px rgb(0 0 0 / 8%)
-}
-.search{
-    position: relative;
-    width: 23rem;
-    border-radius: 2rem;
-    background: #f8f8f8;
-    margin-left: 4rem;
-    font-size: 1.2rem;
-}
-.search input{
-  border: initial;
-  background: transparent;
-  outline: initial!important;
-  font-size: 1.5rem;
-  width: 93%;
-  color: #3a3a3a;
-  padding: 0.4rem 1.5rem;
-  line-height: 2;
-  box-sizing: border-box;
-}
-.search span{
-  font-size: 2rem;
-  color: #d7d7d7;
-  position: absolute;
-  bottom: 9px;
-  right: 10px;
-  text-align: center;
-  cursor: pointer;
-}
-.brand-icon{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.brand-icon img{
-  width: 80px;
-}
-
-.left-nav {
-  display: flex;
-  height: fit-content;
-}
-.right-nav{
-  display: flex;
-  justify-content: end;
-}
-.right-nav .profile{
-  width: 35px;
-  height: 35px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.right-nav .profile img{
-  width: -webkit-fill-available;
 }
 
 .menu .icon{
@@ -92,32 +23,3 @@ kendo-drawer-content{
   border: 0.094rem solid rgb(248,248,248);
   
 }
-
-.language{
-  margin-left: 1.4rem;
-  font-size: 1.2rem;
-  border: none;
-  padding: 0 1.5rem;
-  border-radius: 2rem;
-  color: #8f8f8f;
-  background-color: #f8f8f8;
-}
-.language-caret{
-  font-size: 10px; 
-}
-
-.buy{
-  font-size: 1.2rem;
-  margin-left: 1.4rem;
-  border: 1px solid #145388;;
-  padding: 0 2rem;
-  border-radius: 2rem;
-  color: #145388;
-  background-color: transparent;
-}
-.buy:hover{
-  background-color: #145388;
-  color: #fff;
-}
-
-
