@@ -1,6 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-demo',
@@ -21,9 +21,9 @@ export class DemoComponent implements OnInit {
   constructor(private http:HttpClient) { }
 
   form:FormGroup= new FormGroup({
-sourceApi: new FormControl(),
-action:new FormControl(),
-sendData: new FormControl()
+sourceApi: new FormControl("",Validators.required),
+action:new FormControl("",Validators.required),
+sendData: new FormControl("",Validators.required)
   })
 
   ngOnInit(): void {
