@@ -8,6 +8,8 @@ import { LayoutModule } from '@progress/kendo-angular-layout';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { TooltipsModule } from '@progress/kendo-angular-tooltip';
+
 
 
 
@@ -29,6 +31,7 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
     InputsModule,
     LabelModule,
     DropDownsModule,
+    TooltipsModule,
    
   ],
   providers: [],
