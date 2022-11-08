@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { LabelModule } from '@progress/kendo-angular-label';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+
 
 
 
@@ -26,6 +28,7 @@ import { LabelModule } from '@progress/kendo-angular-label';
     LayoutModule,
     InputsModule,
     LabelModule,
+    DropDownsModule,
    
   ],
   providers: [],
