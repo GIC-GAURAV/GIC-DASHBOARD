@@ -1,25 +1,31 @@
+<kendo-card style="width: 100%;    padding: 22px;
+">
+<kendo-card-header>Form</kendo-card-header>
+<kendo-card-body>
+  <form  [formGroup]="form">
+    <div class="rows">
 
+      <div class="cols">
+        <kendo-label text="Source Api"></kendo-label>
+          <kendo-textbox formControlName="sourceApi"  ></kendo-textbox>
+      </div>
+      <div class="cols">
+        <kendo-label text="Select Action"></kendo-label>
+        <kendo-dropdownlist formControlName="action"  [data]="action"> </kendo-dropdownlist>
+      </div>
 
-    <kendo-card width="360px">
-        <kendo-card-header class="k-hstack">
-            <p>Choose a sport:</p>
-            <kendo-dropdownlist [data]="listItems"> </kendo-dropdownlist>
-         
-        </kendo-card-header>
-      </kendo-card>
-      
-    <kendo-card width="360px">
-        <kendo-card-header class="k-hstack">
-            <p>Choose a sport:</p>
-            <kendo-dropdownlist [data]="listItems"> </kendo-dropdownlist>
-         
-        </kendo-card-header>
-      </kendo-card>
-      
-    <kendo-card width="360px">
-        <kendo-card-header class="k-hstack">
-            <p>Choose a sport:</p>
-            <kendo-dropdownlist [data]="listItems"> </kendo-dropdownlist>
-         
-        </kendo-card-header>
-      </kendo-card>
+      <div class="cols" >
+        <kendo-label text="Select "></kendo-label>
+        <kendo-dropdownlist formControlName="sendData" [data]="sendData"> </kendo-dropdownlist>
+      </div>
+      <div class="cols" style="text-align: -webkit-center;
+      padding: 19px;">
+
+        <button kendoButton  (click)="submitForm()">Submit</button>
+      </div>
+    </div>
+  </form>
+
+</kendo-card-body>
+
+</kendo-card>

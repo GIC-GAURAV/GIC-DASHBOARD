@@ -12,7 +12,8 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
     LayoutModule,
     ButtonsModule,
     IconsModule,
-    InputsModule
+    InputsModule,
+
   ],
   exports:[
     LayoutModule,
