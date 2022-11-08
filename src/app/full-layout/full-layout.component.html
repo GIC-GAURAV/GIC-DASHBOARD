@@ -1,52 +1,33 @@
-<div class="custom-toolbar">
-  <!-- Left navigation -->
-  <div class="left-nav">
-    
-    <button (click)="drawer.toggle()" kendoButton icon="menu" fillMode="flat"></button>
-    <div class="search">
-      <input placeholder="Search...">
-      <span class="search-icon k-icon k-i-search">
-      </span>
-    </div>
-    <button class="language" kendoButton>EN <span class="language-caret">▼</span></button>
-    <button class="buy" kendoButton>BUY</button>
-  </div>
-  <!-- end -->
 
-  <!-- Icon -->
-  <div class="brand-icon">
-    <img src="assets/images/gic-icon.png" alt="">
-  </div>
-  <!-- end -->
-
-  <!-- Right navigation -->
-  <div class="right-nav">
-    <div class="dark-mode">
-      <kendo-switch></kendo-switch>
-    </div>
-    <div class="account"></div>
-    <div class="notification"></div>
-    <div class="profile">
-      <img src="https://www.theb2bhouse.com/wp-content/uploads/2020/10/Oprah-Picture-300x287.png" alt="">
-    </div>
-  </div>
-  <!-- end -->
-</div>
-
+<app-header (toggle)="toggleUpDown(drawer,drawer2)" ></app-header>
 <kendo-drawer-container>
-  <kendo-drawer style="flex-basis: 100px;" #drawer [items]="items" mode="push" [mini]="false" [expanded]="false">
+  <kendo-drawer id="drawer"  #drawer [items]="items" mode="push" [mini]="false" [expanded]="false">
     <ng-template kendoDrawerTemplate>
-      <div class="menu" *ngFor="let item of items" (click)="onSelect(item)">
+
+      <div  class="menu"  *ngFor="let item of items" 
+      [ngStyle]="{'border-left': item.active ? '5px solid rgb(55, 0, 255)' : 'none'}"
+      (click)="onSelect(item,drawer2)">
+
+      <i class="{{ item.icon }} sideActive"></i>
+      {{item.text}}
+
+      </div>
+    </ng-template>
+  </kendo-drawer>
+
+
+  <kendo-drawer style="box-shadow: 16px 0 17px -7px rgb(0 0 0 / 8%);    border-top: 0.1px solid;
+
+" id="drawer2"  #drawer2 [items]="subItems" mode="push" [mini]="false" [expanded]="false">
+    <ng-template kendoDrawerTemplate>
+      <div class="subMenu" *ngFor="let item of subItems" (click)="onSelectSubItem(item,drawer2)">
         <!-- <span class="{{item.icon}}"></span> -->
-        <i class="icon-social-youtube"></i>
+        <i class="{{ item.icon }}" style="padding-right:10px"></i>
         {{item.text}}
       </div>
     </ng-template>
   </kendo-drawer>
 
 
-  <kendo-drawer-content class="customeSideBar" *ngIf="custometoggle"   >
-    <!-- <h1>hello</h1> -->
     <router-outlet></router-outlet>
-  </kendo-drawer-content>
 </kendo-drawer-container>

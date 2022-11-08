@@ -5,11 +5,11 @@ import { FullLayoutComponent } from './full-layout.component';
 
 const routes: Routes = [
   { path: '', component: FullLayoutComponent,
- children:[ { 
+ children:[ {
   path: 'application',
-  loadChildren: () => import('./application/application.module').then(m => m.ApplicationModule) 
+  loadChildren: () => import('./application/application.module').then(m => m.ApplicationModule)
 }] },
-  
+
  ];
 
 @NgModule({
