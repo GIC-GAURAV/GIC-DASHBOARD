@@ -1,23 +1,51 @@
-<p>to-do-list works!</p>
-hat is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<div class="container" style="min-height: calc(100vh - 126px);">
+	<div class="header">
+		<div class="left-header">
+			<h1>To-do List</h1>
+			<ul>
+				<li>
+					<a>Home &#8739;</a>
+					<a>Applications &#8739;</a>
+					<a>To-do List</a>
+				</li>
+			</ul>
+		</div>
+		<div class="right-header">
+			<button kendoButton class="addNew"><span>Add</span> <span>New</span>
+			</button>
+			<div class="checkbox-deop-down">
+				<input type="checkbox" class="check-box" #notification kendoCheckBox />
+			</div>
+			<kendo-dropdownlist #dropdownlist class="drop-down-one" [data]="listItems"> </kendo-dropdownlist>
+		</div>
+	</div>
+	<div class="second-row">
+		<kendo-dropdownlist defaultItem="Order By : Title" class="drop-down-two" [data]="listItems">
+		</kendo-dropdownlist>
+		<div class="search">
+			<input placeholder="Search...">
+			<span class="search-icon k-icon k-i-search">
+			</span>
+		</div>
+	</div>
+	<div class="border"></div>
+	<div class="card" >
+		<kendo-card class="kendoCard card-header" *ngFor="let data of items" style="max-height: calc(100vh - 126px);">
 
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+			<div class="contain">
+				<h1 kendoCardTitle><span class="k-icon k-i-check-outline k-i-success sign"></span> {{data.title}}
+				</h1>
+				<p kendoCardSubtitle>{{data.subtitle}}</p>
+				<p kendoCardSubtitle>{{data.date}}</p>
+				<p class="education">{{data.catogry}}</p>
+				<kendo-label class="k-checkbox-label" [for]="notification"></kendo-label>
+				<input type="checkbox" #notification kendoCheckBox />
+			</div>
 
-
-Where does it come from?
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
-Where can I get some?
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-
-5
-	paragraphs
-	words
-	bytes
-	lists
-	Start with 'Lorem
-ipsum dolor sit amet...'
+			<p class="To-do-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+				laboris nisi ut aliquip ex ea commodo consequat.quis nostrud exercitation ullamco
+				laboris nisi.</p>
+		</kendo-card>
+	</div>
+</div>
