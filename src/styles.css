@@ -78,7 +78,7 @@ kendo-drawer{
  kendo-drawer .k-drawer-wrapper{
     width: 100% !important;
   }
-  
+
 kendo-drawer .k-drawer-wrapper .menu{
     display: flex !important;
     flex-direction: column;
@@ -96,7 +96,7 @@ kendo-drawer .k-drawer-wrapper .menu{
 
 
 
-  
+
 kendo-drawer .k-drawer-wrapper .menu i{
     font-size: 32px;
   }
@@ -124,7 +124,7 @@ kendo-switch{
 }
 .dark-mode .k-switch-md.k-switch-on .k-switch-thumb-wrap {
   left: calc(100% - 8px);
-  
+
 }
 
 .dark-mode .k-switch-md .k-switch-label-off{
@@ -177,4 +177,7 @@ kendo-tooltip{
 
 .text-muted{
   color: #909090!important;
+}
+kendo-popup{
+  width: 8rem !important;
 }

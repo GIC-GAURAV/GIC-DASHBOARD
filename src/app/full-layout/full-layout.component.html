@@ -4,7 +4,7 @@
   <kendo-drawer id="drawer"  #drawer [items]="items" mode="push" [mini]="false" [expanded]="false">
     <ng-template kendoDrawerTemplate>
 
-      <div  class="menu"  *ngFor="let item of items" 
+      <div  class="menu"  *ngFor="let item of items"
       [ngStyle]="{'border-left': item.active ? '5px solid rgb(55, 0, 255)' : 'none'}"
       (click)="onSelect(item,drawer2)">
 
@@ -27,7 +27,9 @@
       </div>
     </ng-template>
   </kendo-drawer>
+<kendo-drawer-content>
+  <router-outlet></router-outlet>
+</kendo-drawer-content>
 
 
-    <router-outlet></router-outlet>
 </kendo-drawer-container>

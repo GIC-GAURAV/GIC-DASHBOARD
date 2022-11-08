@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-survey',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./survey.component.css']
 })
 export class SurveyComponent implements OnInit {
-
+  @ViewChild("dropdownlist", { static: true }) public dropdownlist: any;
   constructor() { }
 
   ngOnInit(): void {
+    this.dropdownlist.toggle(false);
   }
 
   public listItems: Array<string> = [

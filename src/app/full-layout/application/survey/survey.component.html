@@ -11,12 +11,14 @@
             </ul>
         </div>
         <div class="right-header">
-            <button kendoButton class="addNew">ADD NEW</button>
+            <button kendoButton class="addNew"><span>Add</span> <span>New</span>
+             </button>
             <div class="checkbox-deop-down">
                 <input type="checkbox" class="check-box" #notification kendoCheckBox />
-                <kendo-dropdownlist   class="drop-down-one" [data]="listItems"> </kendo-dropdownlist>  
+
             </div>
-            
+            <kendo-dropdownlist #dropdownlist   class="drop-down-one" [data]="listItems"> </kendo-dropdownlist>
+
         </div>
     </div>
     <div class="second-row">
@@ -32,9 +34,10 @@
     <div class="card">
         <kendo-card class="kendoCard" *ngFor="let data of items">
             <kendo-card-header class="k-hstack card-header">
-                <span class="k-icon k-i-check-outline k-i-success sign"></span>
                 <div class="contain">
-                    <h1 kendoCardTitle>{{data.title}}</h1>
+
+
+                    <h1 kendoCardTitle><span class="k-icon k-i-check-outline k-i-success sign"></span> {{data.title}}</h1>
                     <p kendoCardSubtitle>{{data.subtitle}}</p>
                     <p kendoCardSubtitle>{{data.date}}</p>
                     <p class="education" >{{data.catogry}}</p>
