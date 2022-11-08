@@ -15,7 +15,6 @@
              </button>
             <div class="checkbox-deop-down">
                 <input type="checkbox" class="check-box" #notification kendoCheckBox />
-
             </div>
             <kendo-dropdownlist #dropdownlist   class="drop-down-one" [data]="listItems"> </kendo-dropdownlist>
 
@@ -26,7 +25,7 @@
         </kendo-dropdownlist>
         <div class="search">
             <input placeholder="Search...">
-            <span class="search-icon k-icon k-i-search">
+            <span class="search-icon k-icon k-i-search search_icon">
             </span>
         </div>
     </div>
@@ -36,8 +35,9 @@
             <kendo-card-header class="k-hstack card-header">
                 <div class="contain">
 
-
-                    <h1 kendoCardTitle><span class="k-icon k-i-check-outline k-i-success sign"></span> {{data.title}}</h1>
+               <div style="display: flex;">
+                  <span class="k-icon k-i-check-outline k-i-success sign  check_Icon"></span> <h1 kendoCardTitle> {{data.title}}</h1>
+                </div>
                     <p kendoCardSubtitle>{{data.subtitle}}</p>
                     <p kendoCardSubtitle>{{data.date}}</p>
                     <p class="education" >{{data.catogry}}</p>

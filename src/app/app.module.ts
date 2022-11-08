@@ -9,6 +9,8 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { TooltipsModule } from '@progress/kendo-angular-tooltip';
+import { ChatModule } from '@progress/kendo-angular-conversational-ui';
+
 
 
 
@@ -32,6 +34,7 @@ import { TooltipsModule } from '@progress/kendo-angular-tooltip';
     LabelModule,
     DropDownsModule,
     TooltipsModule,
+    ChatModule,
    
   ],
   providers: [],

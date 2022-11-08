@@ -174,13 +174,20 @@ a {
   font-size: 1rem;
 }
 
-span {
-  margin-right: 1rem;
+.search_icon{
+  margin-right: 1rem !important;
 
+}
+.contain h1 {
+  transition: background-color 2s;
+}
+.contain h1:hover{
+  color: #3195a5;
 }
 
 .sign {
   font-size: large;
+  color: #3195a5;
 }
 
 kendo-popup{
