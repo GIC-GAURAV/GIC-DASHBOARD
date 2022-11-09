@@ -1,21 +1,47 @@
-<!-- <kendo-card style="width: 100%; height:100%">
-  <kendo-card-header>
 
-  </kendo-card-header>
-  <kendo-card-body>
-
-  </kendo-card-body>
-  <kendo-card-footer>
-
-  </kendo-card-footer>
-</kendo-card> -->
-
-<div>
-  <kendo-chat
-  [messages]="messages"
-  [user]="user"
-  (sendMessage)="sendMessage($event)"
-  [style.height.px]="250"
->
-</kendo-chat>
+<div class="container">
+  <div class="first-user">
+    <img src="assets\images\user-1.jpg" alt="user-profile" width="50px" class="first-user-img"
+    height="50px" >
+    <div class="user-details">
+      <h1 class="title">Linn Ronning</h1>
+      <p class="user-time">Last seen today 15:24</p>
+    </div>
+  </div>
+  <div class="border"></div>
+  <div class="scroll-container">
+    <div class="card-group" *ngFor="let data of items">
+      <kendo-card  class="kendo--card">
+        <div class="multiple-user">
+          <kendo-avatar
+          width="40px"
+          height="40px"
+          [imageSrc]="data.userProfile"
+          shape="circle"
+        ></kendo-avatar>
+        <h1 kendoCardTitle class="user-name">{{data.userName}}</h1>
+        <p class="send-time">{{data.time}}</p>
+        </div>  
+        <div class="multiple-user-msg">
+          <p kendoCardSubtitle class="message">{{data.message}}</p>
+        </div>
+      </kendo-card>  
+    </div> 
+  </div>
+  <kendo-card width="70em" style="margin-left: 3rem;">
+    <kendo-card-header class="k-hstack">
+      <p kendoCardSubtitle>Say something...</p>
+      <div class="button-details">
+        <span class="k-icon k-i-attachment-45
+        k-i-clip-45 sign"></span>
+        <kendo-avatar
+        class="k-icon k-i-arrow-chevron-right"
+        width="40px"
+        height="40px"
+        shape="circle"
+      ></kendo-avatar>
+      </div>
+    </kendo-card-header>
+  </kendo-card>
+  
 </div>

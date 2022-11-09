@@ -1,0 +1,70 @@
+.first-user{
+    display: flex;
+    width: 36rem;
+    padding: 1rem;
+
+}
+.user-details{
+    margin-left: 2rem;
+}
+.user-time{
+    font-size: 1.2rem;
+}
+.title{
+    font-size: 1.7rem;
+}
+
+.first-user-img{
+border-radius: 50%;
+}
+.border{
+    border-bottom: 1px solid #d7d7d7;
+    margin-top: 4rem;  
+}
+.card-group{
+    margin: 3rem;
+}
+.kendo--card{
+    width: 70em!important;
+    padding: 2.6rem;
+    display: flex;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+
+}
+.multiple-user{
+    display: flex;
+}
+.multiple-user-msg{
+    margin-left: 7rem;
+    margin-top: 1px;
+}
+.multiple-user-msg{
+    margin-top:0.07rem;
+}
+.send-time{
+    margin-left: auto;
+    margin-top: -2rem;
+}
+.message{
+    margin-left: -1rem;
+}
+.button-details{
+    display: flex;
+    margin-left: 75rem;
+}
+.sign{
+    border-radius: 61%;
+    /* background-color: red; */
+    font-size: 2rem;
+    border: 1px solid black;
+    padding: 2rem;
+
+    margin-right: 1rem;
+}
+/* .scroll-container{
+    overflow-x: hidden;
+  overflow-y: scroll;
+} */
