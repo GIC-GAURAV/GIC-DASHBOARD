@@ -1,141 +1,195 @@
-
-  kendo-dropdownlist {
-    width: 200px;
-  }
-  .container{
+/* .container{
     background-color:rgb(248,248,248)
-  }
-  .header{
-    display: flex;
-  }
-  ul{
-    list-style: none;
-    font-size: 1.3rem;
-    margin: auto;
-   margin-left: 1.6rem;
-  }
-  .header{
-    justify-content: space-between;
-  }
-  a{
-    padding: 0.5rem;
-  }
-  .addNew{
-  background-color: rgb(20,83,136);
+  } */
+.header {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  font-size: 1.3rem;
+  margin: auto;
+  margin-left: 1.6rem;
+}
+
+.header {
+  justify-content: space-between;
+}
+
+a {
+  padding: 0.5rem;
+}
+
+.addNew {
+  display: flex;
+  background-color: #008ecc;;
   color: #fff;
   margin-right: 1rem;
   line-height: 1.5;
   font-weight: 700;
-  letter-spacing: .05rem;
-  padding: 0.6rem 4rem;
-  border-color: rgb(20,83,136);
+  /* letter-spacing: .05rem; */
+  padding: 0.96rem 4rem;
+  border-color:#008ecc;;
   border: none;
-  border-radius:3rem ;
-  transition: background-color rgb(5, 60, 105) 0.3s;
-  }
-  .addNew:hover{
-   background-color: #113366;
-   color: #fff;
-    }
+  border-radius: 3rem;
+  transition: background-color 1s;
+}
 
- 
-  .left-header{
-    display:flex;
-
-  }
-  .right-header{
-    display: flex;
-  }
-  .drop-down-one{
-    width: fit-content;
-   background-color: rgb(20,83,136);
+.addNew:hover {
   color: #fff;
-  padding: 0.6rem 2.5rem;
-  border-color: rgb(20,83,136);
-  border: none;
-  border-radius:3rem ;
- 
-  }
-  .second-row{
-    display: flex;
-    margin: 2rem 0;
-  }
- 
+  background-color: #0072a3;
+  border-color: #0072a3;
+}
 
-  .search{
-    position: relative;
-    border-radius: 3rem;
-    background: #f8f8f8;
-    margin-left: 1rem;
-    font-size: 1.5rem;
-    border: 1px solid #8f8f8f;
-    
-  }
-  .search input{
-    border: initial;
-    background: transparent;
-    outline: initial!important;
-    font-size: 1.2rem;
-    color: #3a3a3a;
-    padding: 0.4rem 1.5rem;
-    line-height: 1.7;
-    box-sizing: border-box;
 
-  }
-  .drop-down-two{
-    border: 1px solid #8f8f8f;
-    border-radius: 27px;
-    
-  }
-  .border{
-    border-bottom: 1px solid #d7d7d7;
-  }
-  .card{
-    margin-top: 4rem;
-    
-  }
-  .kendoCard{
-  
+.left-header {
+  display: flex;
 
-    width: 100%!important;
-    /* padding: 2rem; */
-    margin: 2rem auto;
- 
-  }
-  .contain{
-   display: flex;
-   width: 100%;
-   justify-content: space-between;
-  }
-  .avtar{
-    background-color: none!important;
-  }
-  .card-header{
-    height: 10rem;
-    align-items: center;
-  }
-  .education{
-   background-color:rgb(42,147,213);
-   color: #fff;
-   border: 0.3rem solid rgb(42,147,213);
-   border-radius: 1rem;
-   font-size: 1rem;
-  
-  }
-  .new-framework{
-   background-color:rgb(20,83,136) ; 
-   color: #fff;
-   border: 0.3rem solid rgb(20,83,136);
-   border-radius: 1rem;
-   font-size: 1rem;
-  }
-  .personal{
-    background-color: #3195a5;
-    color: #fff;
-    border: 0.3rem solid #3195a5;
-    border-radius: 1rem;
-    font-size: 1rem;
-  }
-  /* .addNew:hover{
-    transition: background-color rgb(5, 60, 105) 0.3s;
-  } */
+}
+
+.right-header {
+  display: flex;
+}
+
+.checkbox-deop-down {
+  display: flex;
+  background-color: #008ecc;;
+  color: #fff;
+  padding: 1rem 1rem 1rem 1.8rem;
+  border-color: #008ecc;;
+  /* border: none; */
+  border-radius: 3rem 0 0 3rem;
+
+}
+
+.drop-down-one {
+  background-color: #008ecc;;
+  color: #fff;
+  border-radius: 0rem 3rem 3rem 0rem;
+  border: #008ecc;
+  transition: background-color 1s;
+}
+.drop-down-one:hover{
+  color: #fff;
+    background-color: #0072a3;
+    border-color: #0072a3;
+}
+
+.check-box {
+  background-color: rgb(20, 83, 136);
+  border-color: #fff;
+  border-radius: 3rem;
+
+}
+
+.second-row {
+  display: flex;
+  margin: 2rem 0;
+}
+
+
+.search {
+  position: relative;
+  border-radius: 3rem;
+  background: #f8f8f8;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  border: 1px solid #8f8f8f;
+
+}
+
+.search input {
+  border: initial;
+  background: transparent;
+  outline: initial !important;
+  font-size: 1.2rem !important;
+  color: #3a3a3a;
+  padding: 0.4rem 1.5rem;
+  line-height: 1.7;
+  box-sizing: border-box;
+
+}
+
+.drop-down-two {
+  border: 1px solid #8f8f8f;
+  border-radius: 27px;
+  width: 17rem;
+  font-size: 1.2rem;
+
+}
+
+.border {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.card {
+  margin-top: 4rem;
+
+}
+
+.kendoCard {
+  width: 100% !important;
+  margin: 2rem auto;
+
+}
+
+.contain {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.avtar {
+  background-color: none !important;
+}
+
+.card-header {
+    padding: 3rem 3rem 3rem 0rem;
+  align-items: center;
+}
+
+.education {
+  background-color: rgb(42, 147, 213);
+  color: #fff;
+  border: 0.3rem solid rgb(42, 147, 213);
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: 0.3rem 1rem;
+
+}
+
+.new-framework {
+  background-color: rgb(20, 83, 136);
+  color: #fff;
+  border: 0.3rem solid rgb(20, 83, 136);
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+.personal {
+  background-color: #3195a5;
+  color: #fff;
+  border: 0.3rem solid #3195a5;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+.search_icon{
+  margin-right: 1rem !important;
+
+}
+.contain h1 {
+  transition: background-color 2s;
+}
+.contain h1:hover{
+  color: #3195a5;
+}
+
+.sign {
+  font-size: large;
+  color: #3195a5;
+}
+
+kendo-popup{
+  width: 8rem !important;
+}

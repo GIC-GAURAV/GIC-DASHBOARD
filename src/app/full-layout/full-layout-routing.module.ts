@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: '', component: FullLayoutComponent,
     children: [{
-      path: '',
+      path: 'application',
       loadChildren: () => import('./application/application.module').then(m => m.ApplicationModule)
     }]
   },

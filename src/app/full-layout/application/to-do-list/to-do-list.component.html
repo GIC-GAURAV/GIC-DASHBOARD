@@ -1,1 +1,51 @@
-<p>to-do-list works!</p>
+<div class="container" style="min-height: calc(100vh - 126px);">
+	<div class="header">
+		<div class="left-header">
+			<h1>To-do List</h1>
+			<ul>
+				<li>
+					<a>Home &#8739;</a>
+					<a>Applications &#8739;</a>
+					<a>To-do List</a>
+				</li>
+			</ul>
+		</div>
+		<div class="right-header">
+			<button kendoButton class="addNew"><span>Add</span> <span>New</span>
+			</button>
+			<div class="checkbox-deop-down">
+				<input type="checkbox" class="check-box" #notification kendoCheckBox />
+			</div>
+			<kendo-dropdownlist #dropdownlist class="drop-down-one" [data]="listItems"> </kendo-dropdownlist>
+		</div>
+	</div>
+	<div class="second-row">
+		<kendo-dropdownlist defaultItem="Order By : Title" class="drop-down-two" [data]="listItems">
+		</kendo-dropdownlist>
+		<div class="search">
+			<input placeholder="Search...">
+			<span class="search-icon k-icon k-i-search">
+			</span>
+		</div>
+	</div>
+	<div class="border"></div>
+	<div class="card" >
+		<kendo-card class="kendoCard card-header" *ngFor="let data of items" style="max-height: calc(100vh - 126px);">
+
+			<div class="contain">
+				<h1 kendoCardTitle><span class="k-icon k-i-check-outline k-i-success sign"></span> {{data.title}}
+				</h1>
+				<p kendoCardSubtitle>{{data.subtitle}}</p>
+				<p kendoCardSubtitle>{{data.date}}</p>
+				<p class="education">{{data.catogry}}</p>
+				<kendo-label class="k-checkbox-label" [for]="notification"></kendo-label>
+				<input type="checkbox" #notification kendoCheckBox />
+			</div>
+
+			<p class="To-do-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+				laboris nisi ut aliquip ex ea commodo consequat.quis nostrud exercitation ullamco
+				laboris nisi.</p>
+		</kendo-card>
+	</div>
+</div>

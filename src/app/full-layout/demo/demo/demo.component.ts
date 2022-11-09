@@ -1,3 +1,4 @@
+import { FormActionService } from './../../../Services/form-action.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -18,7 +19,7 @@ export class DemoComponent implements OnInit {
   public sendData: Array<string> = [
     "Email",
   ];
-  constructor(private http:HttpClient) { }
+  constructor(private formservice:FormActionService) { }
 
   form:FormGroup= new FormGroup({
 sourceApi: new FormControl("",Validators.required),
@@ -30,11 +31,10 @@ sendData: new FormControl("",Validators.required)
   }
 
 
-  submitForm(){
-
-this.http.post('http://localhost:3000/data',this.form.value).subscribe(el=>{
-  console.log(el)
-})
+  submit(){
+    this.formservice.submitform(this.form.value).subscribe(res=>{
+      console.log(res)
+    })
   }
 
 }

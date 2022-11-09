@@ -1,3 +1,4 @@
+import { FormActionService } from './Services/form-action.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,18 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from  '@angular/common/http';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { TooltipsModule } from '@progress/kendo-angular-tooltip';
+import { ChatModule } from '@progress/kendo-angular-conversational-ui';
+
+
+
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -26,7 +39,7 @@ import { HttpClientModule } from  '@angular/common/http';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [FormActionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

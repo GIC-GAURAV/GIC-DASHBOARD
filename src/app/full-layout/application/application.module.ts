@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { LabelModule } from '@progress/kendo-angular-label';
+import { ChatModule } from '@progress/kendo-angular-conversational-ui';
 
 const routes: Routes = [
   { path: 'chats', component: ChatsComponent },
@@ -18,17 +19,17 @@ const routes: Routes = [
     SurveyComponent,
     ToDoListComponent,
     ChatsComponent
-    
+
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     DropDownsModule,
     LayoutModule,
-    LabelModule
- 
-    
-       
+    LabelModule,
+    ChatModule
+
+
 
   ],
   exports:[RouterModule]

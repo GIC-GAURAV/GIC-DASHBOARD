@@ -1,0 +1,169 @@
+<div class="custom-toolbar" [class.custom-toolbar-mobile-search]="isMobilesearchbarShow">
+
+    <div class="mobile-searchbar" [class.show]="isMobilesearchbarShow">
+      <kendo-textbox
+          placeholder="Search"
+          [clearButton]="true"
+        >
+          <ng-template kendoTextBoxSuffixTemplate>
+            <!-- <kendo-textbox-separator></kendo-textbox-separator> -->
+            <button kendoButton class="send-button" icon="search"></button>
+            <!-- <kendo-textbox-separator></kendo-textbox-separator> -->
+            <button kendoButton fillMode="clear" class="send-button" icon="close" 
+            (click)="hideSearchbar()"></button>
+          </ng-template>
+        </kendo-textbox>
+    </div>
+  
+    <!-- Left navigation -->
+    <div class="left-nav" [class.hide]="isMobilesearchbarShow">
+      <!-- (click)="drawer.toggle()" -->
+      <button kendoButton icon="menu" fillMode="flat"
+      (click)="clicktoggle()"
+      ></button>
+      <div class="search">
+        <input placeholder="Search...">
+        <span class="search-icon k-icon k-i-search">
+        </span>
+      </div>
+      <div class="mobile-search-icon" (click)="showSearchbar()">
+        <span class="search-icon k-icon k-i-search">
+        </span>
+      </div>
+      <ng-template #language let-anchor >
+        <div class="container language-tooltip" style="grid-template-columns: auto; row-gap: 10px;">
+          <div class="col">English</div>
+          <div class="col">Español</div>
+          <div class="col">English - RTL</div>
+        </div>
+      </ng-template>
+      <button kendoTooltip [tooltipTemplate]="language" title=""  showOn="click" class="language" kendoButton>EN <span class="language-caret">▼</span></button>
+      <button class="buy" kendoButton>BUY</button>
+    </div>
+    <!-- end -->
+  
+    <!-- Icon -->
+    <div class="brand-icon" [class.hide]="isMobilesearchbarShow">
+      <img src="assets/images/gic-icon.png" alt="">
+    </div>
+    <!-- end -->
+  
+    <!-- Right navigation -->
+    <div class="right-nav" [class.hide]="isMobilesearchbarShow">
+      <div class="right-nav-sub dark-mode">
+        <kendo-switch onLabel="" offLabel=""></kendo-switch>
+      </div>
+      <div class="right-nav-sub account" kendoTooltip [tooltipTemplate]="account" title="" showOn="click" [tooltipWidth]="200">
+        <i class="icon simple-icon-grid"></i>
+        <ng-template #account let-anchor>
+          <div class="container account-tooltip" style="grid-template-columns: 1fr 1fr; row-gap: 10px">
+            <div class="col f-align-justify-center">
+              <i class="icon icon-social-youtube"></i>
+              <div class="text">Settings</div>
+            </div>
+            <div class="col f-align-justify-center">
+              <i class="icon icon-social-youtube"></i>
+              <div class="text">Users</div>
+            </div>
+            <div class="col f-align-justify-center">
+              <i class="icon icon-social-youtube"></i>
+              <div class="text">Compoents</div>
+            </div>
+            <div class="col f-align-justify-center">
+              <i class="icon icon-social-youtube"></i>
+              <div class="text">Profits</div>
+            </div>
+            <div class="col f-align-justify-center">
+              <i class="icon icon-social-youtube"></i>
+              <div class="text">Surveys</div>
+            </div>
+            <div class="col f-align-justify-center">
+              <i class="icon icon-social-youtube"></i>
+              <div class="text">Tasks</div>
+            </div>
+        </div>
+        </ng-template>
+      </div>
+      <div class="right-nav-sub notification"  kendoTooltip [tooltipTemplate]="notification" title="" showOn="click" [tooltipWidth]="300">
+        <i class="icon simple-icon-bell"></i>
+        <span class="count">3</span>
+        <ng-template #notification let-anchor >
+            <div class="container notification-tooltips" style="grid-template-columns: auto; row-gap: 6px;">
+              <div class="col">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+                    </div>
+                    <div class="notification-content">
+                        <p>Joisse Kaycee just sent a new comment!</p>
+                        <div class="text-muted">09.04.2018 - 12:45</div>
+                    </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+                    </div>
+                    <div class="notification-content">
+                        <p>Joisse Kaycee just sent a new comment!</p>
+                        <div class="text-muted">09.04.2018 - 12:45</div>
+                    </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+                    </div>
+                    <div class="notification-content">
+                        <p>Joisse Kaycee just sent a new comment!</p>
+                        <div class="text-muted">09.04.2018 - 12:45</div>
+                    </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+                    </div>
+                    <div class="notification-content">
+                        <p>Joisse Kaycee just sent a new comment!</p>
+                        <div class="text-muted">09.04.2018 - 12:45</div>
+                    </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="wrapper">
+                    <div class="img">
+                        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+                    </div>
+                    <div class="notification-content">
+                        <p>Joisse Kaycee just sent a new comment!</p>
+                        <div class="text-muted">09.04.2018 - 12:45</div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+      </div>
+      <div class="right-nav-sub fullscreen">
+        <i class="icon simple-icon-size-fullscreen"></i>
+      </div>
+      <div class="right-nav-sub profile" kendoTooltip [tooltipTemplate]="profile" title="" showOn="click" [tooltipWidth]="160">
+        <img src="https://www.theb2bhouse.com/wp-content/uploads/2020/10/Oprah-Picture-300x287.png" alt="">
+  
+        <ng-template #profile let-anchor >
+          <div class="container profile-tooltips" style="grid-template-columns: auto; row-gap: 6px;">
+            <div class="col">Account</div>
+            <div class="col">Features</div>
+            <div class="col">History</div>
+            <div class="col">Support</div>
+            <div class="sepator"></div>
+            <div class="col">Sign out</div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <!-- end -->
+  </div>
