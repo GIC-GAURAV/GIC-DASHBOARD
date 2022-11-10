@@ -10,6 +10,8 @@ import { LabelModule } from '@progress/kendo-angular-label';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { TooltipsModule } from '@progress/kendo-angular-tooltip';
 import { ChatModule } from '@progress/kendo-angular-conversational-ui';
+import { IndicatorsModule } from '@progress/kendo-angular-indicators';
+
 
 
 
@@ -35,6 +37,7 @@ import { ChatModule } from '@progress/kendo-angular-conversational-ui';
     DropDownsModule,
     TooltipsModule,
     ChatModule,
+    IndicatorsModule,
    
   ],
   providers: [],

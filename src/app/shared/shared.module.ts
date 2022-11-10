@@ -5,6 +5,7 @@ import { ButtonsModule } from "@progress/kendo-angular-buttons";
 import { IconsModule } from "@progress/kendo-angular-icons";
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { TooltipModule } from '@progress/kendo-angular-tooltip';
+import { BadgeModule } from '@progress/kendo-angular-indicators';
 @NgModule({
   declarations: [],
   imports: [
@@ -13,14 +14,16 @@ import { TooltipModule } from '@progress/kendo-angular-tooltip';
     ButtonsModule,
     IconsModule,
     InputsModule,
-    TooltipModule
+    TooltipModule,
+    BadgeModule
   ],
   exports:[
     LayoutModule,
     ButtonsModule,
     IconsModule,
     InputsModule,
-    TooltipModule
+    TooltipModule,
+    BadgeModule
   ]
 })
 export class SharedModule { }

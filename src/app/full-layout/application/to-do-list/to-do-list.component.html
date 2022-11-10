@@ -1,4 +1,4 @@
-<div class="container" style="min-height: calc(100vh - 126px);">
+<div class="container" style="height: calc(100vh - 126px);">
 	<div class="header">
 		<div class="left-header">
 			<h1>To-do List</h1>
@@ -11,7 +11,7 @@
 			</ul>
 		</div>
 		<div class="right-header">
-			<button kendoButton class="addNew"><span>Add</span> <span>New</span>
+			<button kendoButton class="addNew"><span>Add</span>&nbsp; <span>New</span>
 			</button>
 			<div class="checkbox-deop-down">
 				<input type="checkbox" class="check-box" #notification kendoCheckBox />
@@ -24,7 +24,7 @@
 		</kendo-dropdownlist>
 		<div class="search">
 			<input placeholder="Search...">
-			<span class="search-icon k-icon k-i-search">
+			<span class="search-icon k-icon k-i-search search_icon">
 			</span>
 		</div>
 	</div>
@@ -33,8 +33,9 @@
 		<kendo-card class="kendoCard card-header" *ngFor="let data of items" style="max-height: calc(100vh - 126px);">
 
 			<div class="contain">
-				<h1 kendoCardTitle><span class="k-icon k-i-check-outline k-i-success sign"></span> {{data.title}}
-				</h1>
+				<div style="display: flex;">
+          <span class="k-icon k-i-check-outline k-i-success sign  check_Icon"></span> <h1 kendoCardTitle> {{data.title}}</h1>
+        </div>
 				<p kendoCardSubtitle>{{data.subtitle}}</p>
 				<p kendoCardSubtitle>{{data.date}}</p>
 				<p class="education">{{data.catogry}}</p>

@@ -1,26 +1,26 @@
-.container{
+/* .container{
     background-color:rgb(248,248,248);
     height: calc(100vh - 90px);
-  }
+  } */
   .header {
     display: flex;
   }
-  
+
   ul {
     list-style: none;
     font-size: 1.3rem;
     margin: auto;
     margin-left: 1.6rem;
   }
-  
+
   .header {
     justify-content: space-between;
   }
-  
+
   a {
     padding: 0.5rem;
   }
-  
+
   .addNew {
     display: flex;
     background-color: #008ecc;;
@@ -35,23 +35,23 @@
     border-radius: 3rem;
     transition: background-color 1s;
   }
-  
+
   .addNew:hover {
     color: #fff;
     background-color: #0072a3;
     border-color: #0072a3;
   }
-  
-  
+
+
   .left-header {
     display: flex;
-  
+
   }
-  
+
   .right-header {
     display: flex;
   }
-  
+
   .checkbox-deop-down {
     display: flex;
     background-color: #008ecc;;
@@ -60,9 +60,9 @@
     border-color: #008ecc;;
     /* border: none; */
     border-radius: 3rem 0 0 3rem;
-  
+
   }
-  
+
   .drop-down-one {
     background-color: #008ecc;;
     color: #fff;
@@ -75,20 +75,20 @@
       background-color: #0072a3;
       border-color: #0072a3;
   }
-  
+
   .check-box {
     background-color: rgb(20, 83, 136);
     border-color: #fff;
     border-radius: 3rem;
-  
+
   }
-  
+
   .second-row {
     display: flex;
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
-  
-  
+
+
   .search {
     position: relative;
     border-radius: 3rem;
@@ -96,9 +96,9 @@
     margin-left: 1rem;
     font-size: 1.5rem;
     border: 1px solid #8f8f8f;
-  
+
   }
-  
+
   .search input {
     border: initial;
     background: transparent;
@@ -108,47 +108,47 @@
     padding: 0.4rem 1.5rem;
     line-height: 1.7;
     box-sizing: border-box;
-  
+
   }
-  
+
   .drop-down-two {
     border: 1px solid #8f8f8f;
     border-radius: 27px;
     width: 17rem;
     font-size: 1.2rem;
-  
+
   }
-  
+
   .border {
     border-bottom: 1px solid #d7d7d7;
   }
-  
+/*
   .card {
     margin-top: 4rem;
-  
-  }
-  
+
+  } */
+
   .kendoCard {
     width: 100% !important;
     margin: 2rem auto;
-  
+
   }
-  
+
   .contain {
     display: flex;
     width: 100%;
     justify-content: space-around;
   }
-  
+
   .avtar {
     background-color: none !important;
   }
-  
+
   .card-header {
       padding: 3rem 3rem 3rem 0rem;
     align-items: center;
   }
-  
+
   .education {
     background-color: rgb(42, 147, 213);
     color: #fff;
@@ -156,9 +156,11 @@
     border-radius: 2rem;
     font-size: 1rem;
     padding: 0.3rem 1rem;
-  
+    align-items: center;
+    display: flex;
+
   }
-  
+
   .new-framework {
     background-color: rgb(20, 83, 136);
     color: #fff;
@@ -166,7 +168,7 @@
     border-radius: 1rem;
     font-size: 1rem;
   }
-  
+
   .personal {
     background-color: #3195a5;
     color: #fff;
@@ -174,16 +176,16 @@
     border-radius: 1rem;
     font-size: 1rem;
   }
-  
-  span {
-    margin-right: 1rem;
-  
+  .search_icon{
+    margin-right: 1rem !important;
+
   }
-  
+
   .sign {
     font-size: large;
+    color: #3195a5;
   }
-  
+
   kendo-popup{
     width: 8rem !important;
   }
@@ -193,4 +195,3 @@
     margin-top: 3rem;
     padding: 1rem 5rem;
   }
-  
